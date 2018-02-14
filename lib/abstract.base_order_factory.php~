@@ -1,0 +1,12 @@
+<?php
+namespace Orders;
+
+abstract class base_order_factory implements order_factory
+{
+    protected $_cart_module;
+    protected $_shipping_module;
+    protected $_handling_module;
+    protected $_tax_module;
+    protected $_packing_module;
+
+}

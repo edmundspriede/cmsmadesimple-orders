@@ -1,0 +1,12 @@
+<?php
+namespace Orders;
+
+interface order_factory
+{
+    public function set_cart_module(\CMSModule $module);
+    public function set_user_id($uid);
+    public function set_address_policy($policy);
+    public function get_basic_order();
+    public function set_shipping_address(Address $address);
+    public function adjust_for_shipping(Order& $order);
+}

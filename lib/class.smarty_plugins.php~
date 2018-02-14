@@ -1,0 +1,13 @@
+<?php
+namespace Orders;
+
+final class smarty_plugins
+{
+    protected function __construct() {}
+
+    public static function country_options()
+    {
+        $mod = \cms_utils::get_module(MOD_ORDERS);
+        $valid_countries = $mod->GetPreference('valid_countries');
+    }
+}

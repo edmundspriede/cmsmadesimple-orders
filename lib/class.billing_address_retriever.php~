@@ -1,0 +1,39 @@
+<?php
+namespace Orders;
+
+class billing_address_retriever
+{
+    const ADDR_POLICY_COOKIE = 'addr::cookie';
+    const ADDR_POLICY_FEU = 'addr::from_feu';
+    const ADDR_POLICY_LAST = 'addr::from_last';
+    const ADDR_POLICY_NONE = 'addr::none';
+
+    private $_policy;
+    private $_uid;
+
+    public function __construct($policy, $uid)
+    {
+        $this->_policy = $policy;
+        $this->_uid = (int) $uid;
+    }
+
+    /**
+     * Returns Address object, or null
+     */
+    public function get_address()
+    {
+        $out = null;
+        switch( $this->_policy ) {
+        case self::ADDR_POLICY_FEU:
+            if( $this->_uid > 0 ) {
+
+            }
+            break;
+        case self::ADDR_POLICY_LAST:
+        case self::ADDR_POLICY_COOKIE:
+        case self::ADDR_POLICY_NONE:
+            break;
+        }
+        return $out;
+    }
+}

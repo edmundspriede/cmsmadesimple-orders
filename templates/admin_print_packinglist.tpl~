@@ -1,0 +1,2 @@
+<h3>{$mod->Lang('packing_list')}</h3>
+<h4>{$mod->Lang('order')} {$order->get_invoice()} <em>({$order->get_id()})</em></h4>
